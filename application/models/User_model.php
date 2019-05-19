@@ -30,6 +30,17 @@
 				return false;
 			}
 		}
+
+		public function findUser($email){
+			$this->db->where('Email', $email);
+			$result = $this->db->get('user');
+			
+			if($result->num_rows() === 1) {
+				return $result->row(0)->Id;
+			}else {
+				return false;
+			}
+		}
 	}
 ?>
 
