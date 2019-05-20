@@ -145,7 +145,7 @@
 
       </div>
       <div class="modal-footer" id="btnShare">
-        <button type="submit" class="btn btn-warning">Share</button>
+        <button type="submit" class="btn btn-success">Share</button>
       </div>
       <?php echo form_close(); ?>
     </div>
@@ -173,7 +173,7 @@
 					html += '<th scope="row">'+ response[i].Id + '</th>';
 					html += '<td>' + response[i].Name + '</td>';
 					html += '<td>' + 0 + '</td>';
-					html += '<td><button class="btn btn-sm action btn-primary" data-toggle="modal" data-target="#downloadModal" onclick="download(' + response[i].Id + ')">Download</button> <button class="btn btn-sm action btn-warning" data-toggle="modal" data-target="#shareModal" onclick="share(' + response[i].Id + ')">Share</button> <button class="btn btn-sm action btn-danger" onclick="deleteFile(' + response[i].Id + ')">Delete</button></td>';
+					html += '<td><button class="btn btn-sm action btn-primary" data-toggle="modal" data-target="#downloadModal" onclick="download(' + response[i].Id + ')"><i class="fas fa-file-download"></i> Download</button> <button class="btn btn-sm action btn-success" data-toggle="modal" data-target="#shareModal" onclick="share(' + response[i].Id + ')"><i class="fas fa-share-alt"></i> Share</button> <button class="btn btn-sm action btn-danger" onclick="deleteFile(' + response[i].Id + ')"><i class="fas fa-trash"></i> Delete</button></td>';
 					html += '</tr>';
 				}
 				$('#files').html(html);
